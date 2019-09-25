@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { pickPeaks } from "../index";
+import { pickPeaks } from "../katas/pickPeaks";
 
 describe("pickPeaks", () => {
   it("Returned object should have the correct keys", () => {
