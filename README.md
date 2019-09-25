@@ -1,6 +1,6 @@
 # Katas
 
-A collection of Katas swritten in Typescript, and solved using Test Driven Development. Unit test written in Mocha and Chai.
+A collection of Katas written in Typescript, and solved using Test Driven Development. Unit tests written in Mocha and Chai.
 
 ## Current Katas:
 
