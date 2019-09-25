@@ -4,6 +4,6 @@ A collection of Katas written in Typescript, and solved using Test Driven Develo
 
 ## Current Katas:
 
-### [pick Peaks](src/katas/pickPeaks.ts)
+### [Pick Peaks](src/katas/pickPeaks.ts)
 
 ### [Snail Sort](src/katas/snailSort.ts)
