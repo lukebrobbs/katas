@@ -1,9 +1,9 @@
 # Katas
 
-A collection of Katas swritten in Typescript, and solved using Test Driven Development. Unit test written in Mocha and Chai.
+A collection of Katas written in Typescript, and solved using Test Driven Development. Unit tests written in Mocha and Chai.
 
 ## Current Katas:
 
-### [pick Peaks](src/katas/pickPeaks.ts)
+### [Pick Peaks](src/katas/pickPeaks.ts)
 
 ### [Snail Sort](src/katas/snailSort.ts)
