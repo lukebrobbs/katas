@@ -20,3 +20,4 @@ A collection of Katas written in Typescript, and solved using Test Driven Develo
 
 ### [Vin Numbers](src/katas/vinNumbers.ts)
 
+### [object.is() Polyfill](src/katas/objectIs.ts)
