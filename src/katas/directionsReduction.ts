@@ -36,30 +36,7 @@
 
 //     Not all paths can be made simpler. The path `["NORTH", "WEST", "SOUTH", "EAST"]` is not reducible. "NORTH" and "WEST", "WEST" and "SOUTH", "SOUTH" and "EAST" are not directly opposite of each other and can't become such. Hence the result path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
 
-
-function createArray(arr: any[]) {
-  const directionCount: directionCount = {
-    NORTH: "SOUTH",
-    SOUTH: "NORTH",
-    EAST: "WEST",
-    WEST: "EAST"
-  };
-  const returnVal: string[] = [];
-
-  let i = 0;
-  while (i < arr.length) {
-    if (i === arr.length - 1) {
-      returnVal.push(arr[i]);
-      break;
-    }
-    if (arr[i + 1] !== directionCount[arr[i].toUpperCase()]) {
-      returnVal.push(arr[i]);
-      i++;
-    } else i += 2;
-  }
-  return returnVal
-}
-interface directionCount {
+interface directionLookup {
   NORTH: "SOUTH";
   SOUTH: "NORTH";
   EAST: "WEST";
@@ -67,10 +44,20 @@ interface directionCount {
   [key: string]: any;
 }
 export function dirReduc(arr: string[]) {
+  const directionLookup: directionLookup = {
+    NORTH: "SOUTH",
+    SOUTH: "NORTH",
+    EAST: "WEST",
+    WEST: "EAST"
+  };
 
+  return arr.reduce((acc: string[], curr, index) => {
+    if (acc[acc.length - 1] === directionLookup[curr]) {
+      acc.pop()
+    } else {
+      acc.push(curr)
+    }
+    return acc
+  }, [])
 
-  const firstSort = createArray(arr);
-  const secondSort = createArray(firstSort)
-
-  return firstSort.length > secondSort.length ? secondSort : firstSort
 }
