@@ -36,25 +36,17 @@
 
 //     Not all paths can be made simpler. The path `["NORTH", "WEST", "SOUTH", "EAST"]` is not reducible. "NORTH" and "WEST", "WEST" and "SOUTH", "SOUTH" and "EAST" are not directly opposite of each other and can't become such. Hence the result path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
 
-interface directionCount {
-  NORTH: "SOUTH";
-  SOUTH: "NORTH";
-  EAST: "WEST";
-  WEST: "EAST";
-  [key: string]: any;
-}
-export function dirReduc(arr: string[]) {
+
+function createArray(arr: any[]) {
   const directionCount: directionCount = {
     NORTH: "SOUTH",
     SOUTH: "NORTH",
     EAST: "WEST",
     WEST: "EAST"
   };
-
   const returnVal: string[] = [];
 
   let i = 0;
-
   while (i < arr.length) {
     if (i === arr.length - 1) {
       returnVal.push(arr[i]);
@@ -65,5 +57,20 @@ export function dirReduc(arr: string[]) {
       i++;
     } else i += 2;
   }
-  return returnVal;
+  return returnVal
+}
+interface directionCount {
+  NORTH: "SOUTH";
+  SOUTH: "NORTH";
+  EAST: "WEST";
+  WEST: "EAST";
+  [key: string]: any;
+}
+export function dirReduc(arr: string[]) {
+
+
+  const firstSort = createArray(arr);
+  const secondSort = createArray(firstSort)
+
+  return firstSort.length > secondSort.length ? secondSort : firstSort
 }

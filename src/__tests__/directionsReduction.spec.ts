@@ -20,8 +20,8 @@ describe("directionsReduction", () => {
       "NORTH",
       "WEST"
     ]);
-    it('Should work with directions that are not intial opposite, but become so after ', () => {
-      expect(dirReduc(["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"])).to.eql(["WEST", "WEST"])
-    })
   });
+  it('Should work with directions that are not intial opposite, but become so after ', () => {
+    expect(dirReduc(["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"])).to.eql(["WEST", "WEST"])
+  })
 });
