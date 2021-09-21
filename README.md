@@ -4,20 +4,24 @@ A collection of Katas written in Typescript, and solved using Test Driven Develo
 
 ## Current Katas:
 
-### [Pick Peaks](src/katas/pickPeaks.ts)
+### [Pick Peaks](src/pick-peaks/pickPeaks.ts)
 
-### [Snail Sort](src/katas/snailSort.ts)
+### [Snail Sort](src/snail-sort/snailSort.ts)
 
-### [Checkout](src/katas/checkout.ts)
+### [Checkout](src/checkout/checkout.ts)
 
-### [Reflect](src/katas/reflect.ts)
+### [Reflect](src/reflect/reflect.ts)
 
-### [Flatten](src/katas/flatten.ts)
+### [Flatten](src/flatten/flatten.ts)
 
-### [Not Very Secure](src/katas/notVerySecure.ts)
+### [Directions Reduction](src/directions-reduction/DirectionsReduction.ts)
 
-### [Sum Consecutives](src/katas/sumConsecutives.ts)
+### [Not Very Secure](src/not-very-secure/notVerySecure.ts)
 
-### [Vin Numbers](src/katas/vinNumbers.ts)
+### [Sum Consecutives](src/sum-consecutives/sumConsecutives.ts)
 
-### [object.is() Polyfill](src/katas/objectIs.ts)
+### [Vin Numbers](src/vin-numbers/vinNumbers.ts)
+
+### [object.is() Polyfill](src/object-is/objectIs.ts)
+
+### [Calculate with functions](src/calculate-with-functions/calculateWithFunctions.ts)
