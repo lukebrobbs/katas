@@ -19,8 +19,7 @@ jobs:
       name: node/default
       tag: "13.14"
     steps:
-      - codecov/upload:
-          file: ./coverage
+      - codecov/upload
 
 workflows:
   run_tests:
