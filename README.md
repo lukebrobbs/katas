@@ -1,6 +1,7 @@
 # Katas
 
 [![CircleCI](https://circleci.com/gh/lukebrobbs/katas/tree/master.svg?style=svg)](https://circleci.com/gh/lukebrobbs/katas/tree/master)
+[![codecov](https://codecov.io/gh/lukebrobbs/katas/branch/master/graph/badge.svg?token=HNR5316F0N)](https://codecov.io/gh/lukebrobbs/katas)
 
 A collection of Katas written in Typescript, and solved using Test Driven Development. Unit tests written in Mocha and Chai.
 
