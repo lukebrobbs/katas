@@ -1,6 +1,7 @@
 version: "2.1"
 orbs:
   node: circleci/node@4.7.0
+  codecov: codecov/codecov@1.0.2
 jobs:
   test:
     executor:
@@ -11,6 +12,13 @@ jobs:
       - node/install-packages
       - run:
           command: npm run test
+      - store_artifacts:
+          path: coverage
+  upload_coverage:
+    steps:
+      - codecov/upload:
+          file: { { ./coverage } }
+
 workflows:
   run_tests:
     jobs:
