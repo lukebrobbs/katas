@@ -1,5 +1,7 @@
 # Katas
 
+[![CircleCI](https://circleci.com/gh/lukebrobbs/katas/tree/master.svg?style=svg)](https://circleci.com/gh/lukebrobbs/katas/tree/master)
+
 A collection of Katas written in Typescript, and solved using Test Driven Development. Unit tests written in Mocha and Chai.
 
 ## Current Katas:
