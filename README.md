@@ -16,7 +16,7 @@ A collection of Katas written in Typescript, and solved using Test Driven Develo
 
 ### [Flatten](src/flatten/flatten.ts)
 
-### [Directions Reduction](src/directions-reduction/DirectionsReduction.ts)
+### [Directions Reduction](src/directions-reduction/directionsReduction.ts)
 
 ### [Not Very Secure](src/not-very-secure/notVerySecure.ts)
 
