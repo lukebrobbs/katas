@@ -27,3 +27,5 @@ workflows:
     jobs:
       - test
       - upload_coverage
+        requires:
+            - test
