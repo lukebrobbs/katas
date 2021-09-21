@@ -12,21 +12,9 @@ jobs:
       - node/install-packages
       - run:
           command: npm run test:cover
-      - store_artifacts:
-          path: coverage
-  upload_coverage:
-    executor:
-      name: node/default
-      tag: "13.14"
-    steps:
-      - run:
-          command: ls
       - codecov/upload
 
 workflows:
   run_tests:
     jobs:
       - test
-      - upload_coverage:
-          requires:
-            - test
