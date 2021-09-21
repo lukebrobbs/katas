@@ -15,11 +15,15 @@ jobs:
       - store_artifacts:
           path: coverage
   upload_coverage:
+    executor:
+      name: node/default
+      tag: "13.14"
     steps:
       - codecov/upload:
-          file: { { ./coverage } }
+          file: ./coverage
 
 workflows:
   run_tests:
     jobs:
       - test
+      - upload_coverage
