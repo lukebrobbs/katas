@@ -2,12 +2,14 @@ type Direction = "N" | "S" | "E" | "W";
 type RoverCommand = `${number}:${number}:${Direction}`;
 
 export class Rover {
+  gridSize: number;
   positionX: number;
   positionY: number;
   direction: Direction;
   directionMap: Map<string, Direction>;
 
   constructor(x: number, y: number, direction: Direction) {
+    this.gridSize = 10;
     this.positionX = x;
     this.positionY = y;
     this.direction = direction;
@@ -34,25 +36,25 @@ export class Rover {
   ): { x: number; y: number } {
     if (direction === "S") {
       return {
-        x: x - 1,
+        x: this.decrementCoordinate(x),
         y,
       };
     }
     if (direction === "N") {
       return {
-        x: x + 1,
+        x: this.incrementCoordinate(x),
         y,
       };
     }
     if (direction === "E") {
       return {
         x,
-        y: y + 1,
+        y: this.incrementCoordinate(y),
       };
     }
     return {
       x,
-      y: y - 1,
+      y: this.decrementCoordinate(y),
     };
   }
 
@@ -76,5 +78,12 @@ export class Rover {
       }
     }
     return `${newPositionX}:${newPositionY}:${newDirection}`;
+  }
+
+  incrementCoordinate(coord: number): number {
+    return coord !== this.gridSize ? coord + 1 : 1;
+  }
+  decrementCoordinate(coord: number): number {
+    return coord - 1 === 0 ? this.gridSize : coord - 1;
   }
 }

@@ -43,6 +43,25 @@ describe("mars-rover", () => {
       expect(rover.translateCommand("RMM")).toEqual("1:3:E");
       expect(rover.translateCommand("MM")).toEqual("3:1:N");
       expect(rover.translateCommand("MRM")).toEqual("2:2:E");
+      expect(rover.translateCommand("MMMMMMMM")).toEqual("9:1:N");
+    });
+  });
+  describe("Should wrap if the end of the grid is reached", () => {
+    test("Should wrap x if edge of the grid is reached", () => {
+      const rover = new Rover(1, 1, "N");
+      expect(rover.translateCommand("MMMMMMMMMM")).toEqual("1:1:N");
+      expect(rover.translateCommand("MMMMMMMMMMM")).toEqual("2:1:N");
+      expect(rover.translateCommand("RRM")).toEqual("10:1:S");
+      expect(rover.translateCommand("RRMMM")).toEqual("8:1:S");
+      expect(rover.translateCommand("RRMMMLLMMMMMMM")).toEqual("5:1:N");
+    });
+    test("Should wrap y if edge of the grid is reached", () => {
+      const rover = new Rover(1, 1, "E");
+      expect(rover.translateCommand("MMMMMMMMMM")).toEqual("1:1:E");
+      expect(rover.translateCommand("MMMMMMMMMMM")).toEqual("1:2:E");
+      expect(rover.translateCommand("RRM")).toEqual("1:10:W");
+      expect(rover.translateCommand("RRMMM")).toEqual("1:8:W");
+      expect(rover.translateCommand("RRMMMLLMMMMMMM")).toEqual("1:5:E");
     });
   });
 });
